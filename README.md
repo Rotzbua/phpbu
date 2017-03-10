@@ -60,18 +60,24 @@ Get detailed information about all the features and a 'getting started' tutorial
 
 You can [download](https://phar.phpbu.de/phpbu.phar) a PHP Archive [(PHAR)](http://php.net/phar) that bundles everything you need to run *PHPBU* in a single file.
 
-    wget https://phar.phpbu.de/phpbu.phar
-    chmod +x phpbu.phar
-    php phpbu.phar --version
+```sh-session
+wget https://phar.phpbu.de/phpbu.phar
+chmod +x phpbu.phar
+php phpbu.phar --version
+```
 
 For convenience, you can move the PHAR to a directory that is in your [PATH](http://en.wikipedia.org/wiki/PATH_%28variable%29).
 
-    mv phpbu.phar /usr/local/bin/phpbu
-    phpbu --version
-    
+```bash
+mv phpbu.phar /usr/local/bin/phpbu
+phpbu --version
+```
+
 Using [PHIVE](https://phar.io) to install *PHPBU*. 
 
-    phive install phpbu
+```bash
+phive install phpbu
+```
 
 Installing *PHPBU* via Composer is also supported.
 
@@ -97,22 +103,22 @@ phpbu [option]
 ```
 
 ### Usage Examples
-
-    $ phpbu
-
+```bash
+$ phpbu
+```
 This requires a valid XML *PHPBU* configuration file (phpbu.xml or phpbu.xml.dist) in your current working directory.
 Alternatively, you can specify the path to your configuration file.
-
-    $ phpbu --configuration=backup/config.xml
-
+```bash
+$ phpbu --configuration=backup/config.xml
+```
 Use the *--limit* option to execute only a subset of your configured backups.
-
-    $ phpbu --limit=myAppDB
-
+```bash
+$ phpbu --limit=myAppDB
+```
 Use the *--simulate* option to perform a trial run without actually executing the configured backups.
-
-    $ phpbu --simulate
-    
+```bash
+$ phpbu --simulate
+```
 ## Configuration Example
 
 Simple configuration example:
